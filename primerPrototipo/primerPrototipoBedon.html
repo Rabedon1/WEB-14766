@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Sellos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        padding: 20px;
+        position: relative;
+      }
+
+      #logo {
+        position: absolute;
+        left: 10px;
+        top: 35%;
+        transform: translateY(-50%);
+      }
+
+      #search-bar {
+        position: absolute;
+        left: 150px;
+        top: 40%;
+        transform: translateY(-50%);
+      }
+
+      #search-bar input {
+        width: 300px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #search-bar button {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #cart-button {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        transform: translateY(-50%);
+        background-color: #772929;
+        color: #333; /* Cambiado a un color más oscuro para mejorar la visibilidad */
+        border: none;
+        padding: 10px 16px; /* Reducido el padding */
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        margin-top: 90px;
+      }
+
+      nav a {
+        float: left;
+        display: block;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+      }
+      nav a:hover {
+        background-color: #555;
+      }
+      #featured-products {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .featured-product {
+        text-align: center;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 30%;
+      }
+      #customers-section {
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #about-us-aside {
+        width: 30%;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-top: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      aside {
+        width: 300px;
+        margin-left: 20px;
+      }
+
+      #social-media {
+        margin-top: 20px;
+      }
+
+      #social-media img {
+        width: 30px;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <img src="imagenes/logo.png" alt="Sello" width="100" height="100" />
+      </div>
+      <div id="search-bar">
+        <input type="text" placeholder="Buscar..." />
+        <button type="submit">Buscar</button>
+      </div>
+      <button id="cart-button">🛒</button>
+      <nav>
+        <a href="Promociones">Promociones</a>
+        <a href="Productos">Nuestros Productos</a>
+        <a href="trabajaConNosotros">Trabaja con nosotros</a>
+        <a href="Sellos">Sellos</a>
+        <a href="rotulacion">Rotulación</a>
+        <a href="gigantografias">Gigantografias</a>
+      </nav>
+    </header>
+    <section id="featured-products">
+      <div class="featured-product">
+        <img
+          src="imagenes/sello.jpeg"
+          alt="Producto 1"
+          width="200"
+          height="200"
+        />
+        <h3>Sellos</h3>
+        <button>Ver Productos</button>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="imagenes/gigantografia.jpeg"
+          alt="Producto 2"
+          width="200"
+          height="200"
+        />
+        <h3>Gigantografias</h3>
+
+        <button>Ver Productos</button>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="imagenes/imprenta.jpeg"
+          alt="Producto 3"
+          width="200"
+          height="200"
+        />
+        <h3>Imprenta</h3>
+        <button>Ver Productos</button>
+      </div>
+    </section>
+    <section id="customers-section">
+      <h2>Nuestros Clientes</h2>
+      <p>Algunas palabras o comentarios de nuestros clientes satisfechos.</p>
+      <aside id="about-us-aside">
+        <h2>About Us</h2>
+        <p>
+          Somos una tienda en línea dedicada a proporcionar productos de alta
+          calidad, incluyendo sellos personalizados, gigantografías, pancartas y
+          servicios de impresión. Nuestra misión es...
+        </p>
+      </aside>
+    </section>
+    <footer>
+      <div id="social-media">
+        <img src="imagenes/facebook.png" alt="Facebook" />
+        <img src="imagenes/instagram.png" alt="Instagram" />
+      </div>
+
+      <p>Dirección: Av. de la República 1798, Quito 170135, Ecuador</p>
+      <p>
+        <a href="https://maps.app.goo.gl/JeecBCatS6V64YRB8"
+          >Ver en Google Maps</a
+        >
+      </p>
+      <p>Contacto: sellosideart@gmail.com | Teléfono: +593 99 801 5039</p>
+    </footer>
+  </body>
+</html>

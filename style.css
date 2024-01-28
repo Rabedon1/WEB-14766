@@ -4,8 +4,13 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: Georgia;
     padding: 0px 0px 0px;
+    background: #8f2c2c;
+}
+h1{
+    text-align: center;
+    color: rgb(244, 245, 243);
 }
 
 header{
@@ -114,7 +119,7 @@ header{
 }
 .barra{
     background: rgb(90, 87, 87);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     height: 2px;
@@ -151,6 +156,7 @@ header{
     }
     
     .navMenu{
+        z-index: 1;
         flex-direction: column;
         align-items: center;
         margin: 0;
@@ -188,50 +194,90 @@ header{
         top: 6px;
         padding: 5px;
     }
+    
 }
+
+
 
 /* Hasta aqui es los estilos de la cebecera */
 
 /* Aquí empieza los estilos del cuerpo de la página */
 
-.slide-container {
+.nuestrosServicios{
+    display: flex;
     width: 100%;
-    height:85vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-color: rgb(110, 110, 250);
-}
-
-.image-slider{
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-}
-
-.slides-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 30px;
-}
-
-.img{
+    height: 430px;
     position: relative;
-    width: 240px;
-    height: 370px;
-    transition: 0.5s;
 }
 
-.button {
-    position: absolute;
-    width: 240px;
-    height: 370px;
-    transition: 0.5s;
-    background-color: rgba(67, 67, 151, 0.2);
+.imgNuestosServicios{
+    display: flex;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.imgNuestosServicios:hover{
+    width: 500px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+.aboutUS-section {
+    display: flex;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px; 
+    margin: 20px auto;
+}
+
+.about-us-aside,
+.gerente {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px; 
+    border-radius: 8px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000000; /* Borde general de la tabla */
+  }
+
+  th, td {
+    border: 1px solid #131010; /* Bordes de las celdas */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: left;
+  }
+
+  th {
+    background-color: #000000; /* Color de fondo para las celdas de encabezado */
+  }
+
+  ul {
+    list-style-type: circle;
+    padding: 0; /* Elimina el espacio alrededor de la lista */
+  }
+
+  /* Reduzca el espacio entre el texto y las viñetas */
+  li {
+    margin-bottom: 10px; /* Ajusta el espacio entre elementos de la lista */
+  }
+.social-media{
+    padding: 10px;
+}
+.social-mediaImg {
+    width: 30px;
+    margin: 0 10px;
 }

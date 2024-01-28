@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="resultadosRegistro.php" method="post" id="nivelacionForm" onsubmit="return validarFormulario();" enctype="multipart/form-data">
+            <form action="../index.html" method="post" id="nivelacionForm" onsubmit="return validarFormulario();" enctype="multipart/form-data">
                 <h1>Crear Cuenta</h1>
                 <input placeholder="Nombre" type="text" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios (si es hijo de Elon Musk salado)" name="nombre" required>
                 <input placeholder="Apellido" type="text" id="apellidos"  pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios (si es hijo de Elon Musk salado)" name="apellidos" required>
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="login.php" method="post">
+            <form action="../index.html" method="post">
                 <h1>Iniciar Sesión</h1>
                 <input placeholder="Correo" type="email" id="email" name="email" required>
                 <input placeholder="Contraseña" type="password" id="contrasena" name="contrasena" required>

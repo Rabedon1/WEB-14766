@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 0px 0px 0px;
+}
+
+header{
+    background-color: #5b6074;
+    background: linear-gradient(to right, #CD323A, #272829);
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink{
+    color: white;
+    text-decoration: none;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.imgLogo{
+    height: 70px;
+    width: 70px;
+    margin-left: 10%;
+    margin-top: 5%;
+    line-height: 80px;
+}
+
+.navMenu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.navMenuItem{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.navMenuLink:hover{
+    background-color: #6b3f3f;
+    transition: 0.5s;
+}
+
+.toggle{
+    color: #5a5959;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.buscar{
+    position: relative;
+    top: 15px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn{
+    width: 55px;
+    height: 50px;
+    background: #130b0b;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(65, 41, 41);
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.barra{
+    background: rgb(90, 87, 87);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+}
+
+@keyframes scroll1 {
+    100%{
+        width: 100%;
+    }
+}
+
+.progreso{
+    height: 100%;
+    width: 0px;
+    background: rgb(36, 36, 36);
+    animation: scroll1 auto linear forwards;
+    animation-timeline: scroll();
+}
+
+
+@media(max-width: 760px){
+    body{
+        padding-top: 0px;
+    }
+    
+    header{
+        height: 60px;
+    }
+    
+    .imgLogo{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .navMenu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #5b6074;
+        background: linear-gradient(to right, #CD323A, #272829);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .navMenuItem{
+        line-height: 70px;
+    }
+    
+    .navMenuLink:hover{
+        background: none;
+        color:#cfa8a8;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    .navMenu_visible{
+        left:0;
+    }
+    .buscar{
+        top: 6px;
+        padding: 5px;
+    }
+}
+
+/* Hasta aqui es los estilos de la cebecera */
+
+/* Aquí empieza los estilos del cuerpo de la página */
+
+.slide-container {
+    width: 100%;
+    height:85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(110, 110, 250);
+}
+
+.image-slider{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+}
+
+.img{
+    position: relative;
+    width: 240px;
+    height: 370px;
+    transition: 0.5s;
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.5s;
+    background-color: rgba(67, 67, 151, 0.2);
+}

@@ -199,7 +199,7 @@ header{
 
 
 
-/* Hasta aqui es los estilos de la cebecera */
+/* Hasta aqui es los estilos de la cabecera */
 
 /* Aquí empieza los estilos del cuerpo de la página */
 
@@ -234,14 +234,42 @@ header{
     margin: 20px auto;
 }
 
+
+/* Estilo para cada aside dentro de aboutUS-section */
 .about-us-aside,
-.gerente {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 20px; 
-    border-radius: 8px;
+.fotoSellosIdeart {
+  width: 45%; /* Ajusta el ancho según tus necesidades */
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px;
 }
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about-us-aside,
+  .fotoSellosIdeart {
+    width: 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
+  }
+}
+
+/* Estilo para cada aside dentro de aboutUS-section */
+.about-us-aside,
+.fotoSellosIdeart {
+  width: 45%; /* Ajusta el ancho según tus necesidades */
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about-us-aside,
+  .fotoSellosIdeart {
+    width: 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
+  }
+}
+    
+
 footer {
     background-color: #333;
     color: white;
@@ -281,3 +309,9 @@ table {
     width: 30px;
     margin: 0 10px;
 }
+  
+  .fotoSellosIdeart img {
+    width: 400px; /* O el porcentaje que desees */
+    height: auto; /* Esto mantiene la proporción original de la imagen */
+  }
+  

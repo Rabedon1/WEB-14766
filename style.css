@@ -80,7 +80,7 @@ header{
 .buscar{
     position: relative;
     top: 15px;
-    margin-left: 20px;
+    margin-left: 20 px;
     padding: 5px;
 }
 
@@ -119,7 +119,7 @@ header{
 }
 .barra{
     background: rgb(90, 87, 87);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 2px;
@@ -135,7 +135,7 @@ header{
 .progreso{
     height: 100%;
     width: 0px;
-    background: rgb(36, 36, 36);
+    background: rgb(225, 213, 213);
     animation: scroll1 auto linear forwards;
     animation-timeline: scroll();
 }

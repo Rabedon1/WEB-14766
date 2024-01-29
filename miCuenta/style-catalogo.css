@@ -1,0 +1,159 @@
+
+header{
+    background-color: #5b6074;
+    background: linear-gradient(to right, #CD323A, #272829);
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink{
+    color: white;
+    text-decoration: none;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.imgLogo{
+    height: 70px;
+    width: 70px;
+    margin-left: 10%;
+    margin-top: 5%;
+    line-height: 80px;
+}
+
+.navMenu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.navMenuItem{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.navMenuLink:hover{
+    background-color: #6b3f3f;
+    transition: 0.5s;
+}
+
+.toggle{
+    color: #5a5959;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.buscar{
+    position: relative;
+    top: 15px;
+    margin-left: 20px;
+    padding: 5px;
+}
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn{
+    width: 55px;
+    height: 50px;
+    background: #130b0b;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(65, 41, 41);
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+body {
+    background-image: url('../imagenes/imagenSellos.png');
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9;
+    font-family: Verdana;
+  }
+  
+  .producto {
+    background-color: #d6cdcd;
+    border: 1px solid #999191;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .producto img {
+    width: 200px;
+    height: 300px; 
+
+  }
+  
+  .descripcion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .boton-descripcion {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .boton-comprar {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .boton-descripcion:hover, .boton-comprar:hover {
+    background-color: #1a609c;
+  }
+  

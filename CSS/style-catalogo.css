@@ -269,3 +269,14 @@ body {
     background-color: #1a609c;
   }
   
+  .productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .producto {
+    width: 48%; /* Ajusta el ancho de los productos según sea necesario */
+    margin-bottom: 20px;
+  }

@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/086e5c1729.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <script defer src="index.js"></script>
   </head>
 
@@ -27,20 +27,24 @@
         <button class="toggle"><i class="fa-solid fa-bars"></i></button>
         <ul class="navMenu">
           <li class="navMenuItem">
-            <a href="catalogo/catalogo.html" class="navMenuLink navLink"
+            <a href="HTML/catalogo.html" class="navMenuLink navLink"
               >Catálogo</a
             >
+            <ul class="submenu" id="catalogo-submenu">
+              <!-- Agrega aquí las opciones del catálogo como elementos <li> dentro de este <ul> -->
+              <li><a href="#">Opción 1</a></li>
+              <li><a href="#">Opción 2</a></li>
+              <!-- ... Agrega más opciones según sea necesario ... -->
+            </ul>
           </li>
           <li class="navMenuItem">
             <a href="#" class="navMenuLink navLink">Promociones</a>
           </li>
           <li class="navMenuItem">
-            <a href="#" class="navMenuLink navLink">FAQs</a>
+            <a href="HTML/faqs.html" class="navMenuLink navLink">FAQs</a>
           </li>
           <li class="navMenuItem">
-            <a
-              href="miCuenta/iniciar-registrarse.php"
-              class="navMenuLink navLink"
+            <a href="HTML/iniciar-registrarse.php" class="navMenuLink navLink"
               >Mi Cuenta</a
             >
           </li>

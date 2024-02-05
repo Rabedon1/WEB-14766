@@ -19,3 +19,18 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var catalogoLink = document.getElementById("catalogo-link");
+    var catalogoSubMenu = document.getElementById("catalogo-submenu");
+  
+    // Mostrar el submenu al pasar el mouse sobre el enlace del catálogo
+    catalogoLink.addEventListener("mouseenter", function () {
+      catalogoSubMenu.style.display = "block";
+    });
+  
+    // Ocultar el submenu al retirar el mouse del enlace del catálogo
+    catalogoLink.addEventListener("mouseleave", function () {
+      catalogoSubMenu.style.display = "none";
+    });
+  });
+  

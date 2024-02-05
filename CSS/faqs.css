@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana;
+    padding: 0px 0px 0px;
+    background: #8f2c2c;
+  
+}
+h1{
+    text-align: center;
+    color: rgb(244, 245, 243);
+}
+
+header{
+    background-color: #5b6074;
+    background: linear-gradient(to right, #CD323A, #272829);
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink{
+    color: white;
+    text-decoration: none;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.imgLogo{
+    height: 70px;
+    width: 70px;
+    margin-left: 10%;
+    margin-top: 5%;
+    line-height: 80px;
+}
+
+.navMenu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.navMenuItem{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.navMenuLink:hover{
+    background-color: #6b3f3f;
+    transition: 0.5s;
+}
+
+.toggle{
+    color: #5a5959;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.buscar{
+    position: relative;
+    top: 15px;
+    margin-left: 20 px;
+    padding: 5px;
+}
+
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn{
+    width: 55px;
+    height: 50px;
+    background: #130b0b;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(65, 41, 41);
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.barra{
+    background: rgb(90, 87, 87);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+}
+
+@keyframes scroll1 {
+    100%{
+        width: 100%;
+    }
+}
+
+.progreso{
+    height: 100%;
+    width: 0px;
+    background: rgb(225, 213, 213);
+    animation: scroll1 auto linear forwards;
+    animation-timeline: scroll();
+}
+
+
+@media(max-width: 760px){
+    body{
+        padding-top: 0px;
+    }
+    
+    header{
+        height: 60px;
+    }
+    
+    .imgLogo{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .navMenu{
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #5b6074;
+        background: linear-gradient(to right, #CD323A, #272829);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .navMenuItem{
+        line-height: 70px;
+    }
+    
+    .navMenuLink:hover{
+        background: none;
+        color:#cfa8a8;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    .navMenu_visible{
+        left:0;
+    }
+    .buscar{
+        top: 6px;
+        padding: 5px;
+    }
+    
+}
+.comentarios-section-container {
+    width: 60%; /* Ajusta el ancho del contenedor según sea necesario */
+    max-width: 400px; /* Ajusta el ancho máximo del contenedor según sea necesario */
+    background-color: #f4f4f4; /* Ajusta el color de fondo del contenedor según tu diseño */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Para centrar el contenedor horizontalmente */
+  }
+  
+  .comentarios-section {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    width: 80%; /* Ajusta el ancho del cuadro según sea necesario */
+    max-width: 600px; /* Ajusta el ancho máximo del cuadro según sea necesario */
+    margin: auto; /* Centra el cuadro horizontalmente */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4c54af; /* Ajusta el color del botón según tu diseño */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Ajusta el color del botón al pasar el mouse según tu diseño */
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000000; /* Borde general de la tabla */
+  }
+
+  th, td {
+    border: 1px solid #131010; /* Bordes de las celdas */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: left;
+  }
+
+  th {
+    background-color: #000000; /* Color de fondo para las celdas de encabezado */
+  }
+
+  ul {
+    list-style-type: circle;
+    padding: 0; /* Elimina el espacio alrededor de la lista */
+  }
+
+  /* Reduzca el espacio entre el texto y las viñetas */
+  li {
+    margin-bottom: 10px; /* Ajusta el espacio entre elementos de la lista */
+  }
+.social-media{
+    padding: 10px;
+}
+.social-mediaImg {
+    width: 30px;
+    margin: 0 10px;
+}
+  
+  .fotoSellosIdeart img {
+    width: 400px; /* O el porcentaje que desees */
+    height: auto; /* Esto mantiene la proporción original de la imagen */
+  }

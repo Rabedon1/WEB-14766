@@ -7,7 +7,6 @@ body{
     font-family: Verdana;
     padding: 0px 0px 0px;
     background: #8f2c2c;
-  
 }
 h1{
     text-align: center;
@@ -16,7 +15,7 @@ h1{
 
 header{
     background-color: #5b6074;
-    background: linear-gradient(to right, #CD323A, #272829);
+    background: linear-gradient(to right,#CD323A ,#020202);
     height: 80px;
     width: 100%;
     top: 0;
@@ -197,6 +196,11 @@ header{
     }
     
 }
+
+
+
+/* Hasta aqui es los estilos de la cabecera */
+
 .comentarios-section-container {
     width: 60%; /* Ajusta el ancho del contenedor según sea necesario */
     max-width: 400px; /* Ajusta el ancho máximo del contenedor según sea necesario */

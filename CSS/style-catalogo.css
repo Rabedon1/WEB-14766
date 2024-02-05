@@ -15,7 +15,7 @@ h1{
 
 header{
     background-color: #5b6074;
-    background: linear-gradient(to right, #CD323A, #272829);
+    background: linear-gradient(to right,#CD323A ,#020202);
     height: 80px;
     width: 100%;
     top: 0;
@@ -119,7 +119,7 @@ header{
 }
 .barra{
     background: rgb(90, 87, 87);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 2px;
@@ -135,7 +135,7 @@ header{
 .progreso{
     height: 100%;
     width: 0px;
-    background: rgb(36, 36, 36);
+    background: rgb(225, 213, 213);
     animation: scroll1 auto linear forwards;
     animation-timeline: scroll();
 }
@@ -199,6 +199,8 @@ header{
 
 
 
+/* Hasta aqui es los estilos de la cabecera */
+
 
 .btn{
     width: 55px;
@@ -215,15 +217,7 @@ header{
     cursor: pointer;
 }
 
-body {
-    background-image: url('../imagenes/imagenSellos.png');
-    background-repeat: repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    opacity: 0.9;
-    font-family: Verdana;
-  }
+
   
   .producto {
     background-color: #d6cdcd;

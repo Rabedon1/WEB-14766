@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ideart - FAQs y Comentarios</title>
+    <title>Ideart</title>
     <script
       src="https://kit.fontawesome.com/086e5c1729.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../CSS/faqs.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
     <script defer src="index.js"></script>
   </head>
 
   <body>
     <header>
       <nav class="nav">
-        <a href="../index.html" class="logo">
-          <img class="imgLogo" src="..\imagenes/logoNegro.png" alt="Ideart" />
-        </a>
+        <a href="../index.html" class="logo"
+          ><img class="imgLogo" src="../imagenes/logoNegro.png" alt="Ideart"
+        /></a>
         <div class="buscar">
           <input type="text" placeholder="Buscar" required />
           <div class="btn">
@@ -27,99 +27,63 @@
         <button class="toggle"><i class="fa-solid fa-bars"></i></button>
         <ul class="navMenu">
           <li class="navMenuItem">
-            <a class="navMenuLink navLink" href="../index.html">Inicio</a>
+            <a href="../HTML/catalogo.html" class="navMenuLink navLink">Catálogo</a>
           </li>
           <li class="navMenuItem">
             <a href="#" class="navMenuLink navLink">Promociones</a>
           </li>
           <li class="navMenuItem">
-            <a href="faqs.html" class="navMenuLink navLink">FAQs</a>
+            <a href="../HTML/faqs.html" class="navMenuLink navLink">FAQs</a>
           </li>
           <li class="navMenuItem">
-            <a
-              href="miCuenta/iniciar-registrarse.php"
-              class="navMenuLink navLink"
+            <a href="HTML/iniciar-registrarse.php" class="navMenuLink navLink"
               >Mi Cuenta</a
             >
           </li>
         </ul>
       </nav>
     </header>
-
-    <div class="container">
-      <section class="faqs-section">
-        <h1>Preguntas Frecuentes</h1>
-        <div class="faq">
-          <h3>Se puede pedir productos personalizados?</h3>
-          <p>
-            Si, a traves del formulario puede mandar la descripcion de que
-            producto necesita personalizar
-          </p>
-        </div>
-      </section>
-
-      <section class="comentarios-section">
-        <h1>Deja tu Comentario</h1>
-        <form action="procesar_comentario.php" method="post">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label for="correo">Correo Electrónico:</label>
-          <input type="email" id="correo" name="correo" required />
-
-          <label for="comentario">Comentario:</label>
-          <textarea
-            id="comentario"
-            name="comentario"
-            rows="4"
-            required
-          ></textarea>
-
-          <button type="submit">Enviar Comentario</button>
-        </form>
-      </section>
+    <div class="barra">
+      <div class="progreso"></div>
     </div>
-
+    
     <footer>
-      <div class="social-media">
-        <a
-          class="social-mediaImg"
-          href="https://www.facebook.com/IdeartSellosSellos/"
-          ><i class="fa-brands fa-instagram" style="color: #6379a1"></i
-        ></a>
-        <a
-          class="social-mediaImg"
-          href="https://www.facebook.com/IdeartSellosSellos/"
-          ><i class="fa-brands fa-facebook-f" style="color: #6379a1"></i
-        ></a>
+      <div class="info">
+        <p>Dirección: Av. de la República 1798, Quito 170135, Ecuador</p>
       </div>
 
-      <p>Dirección: Av. de la República 1798, Quito 170135, Ecuador</p>
-      <table id="horarios-atencion">
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Horario</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lunes - Viernes</td>
-            <td>9:00 AM - 6:00 PM</td>
-          </tr>
-          <tr>
-            <td>Sábado</td>
-            <td>10:00 AM - 2:00 PM</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="horarios">
+        <p>Horarios:</p>
+        <ul>
+          <li><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</li>
+          <li><strong>Sábado:</strong> 10:00 AM - 2:00 PM</li>
+        </ul>
+      </div>
 
-      <p>
-        <a href="https://maps.app.goo.gl/JeecBCatS6V64YRB8"
-          >Ver en Google Maps</a
-        >
-      </p>
-      <p>Contacto: sellosideart@gmail.com | Teléfono: +593 99 8030810</p>
+      <div class="contacto">
+        <p>Contactos</p>
+        <ul>
+          <li><strong>Teléfono:</strong>+593-998030810</li>
+          <li><strong>Correo:</strong>sellosideart@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="redes-sociales">
+        <div class="iconos-sociales">
+          <a
+            class="social-mediaImg"
+            href="https://www.facebook.com/IdeartSellosSellos/"
+          >
+            <i class="fa-brands fa-instagram" style="color: #c2ccdf"></i>
+          </a>
+          <a
+            class="social-mediaImg"
+            href="https://www.facebook.com/IdeartSellosSellos/"
+          >
+            <i class="fa-brands fa-facebook-f" style="color: #bfc3cb"></i>
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

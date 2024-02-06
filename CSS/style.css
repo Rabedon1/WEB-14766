@@ -271,82 +271,95 @@ header{
 }
     
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  footer ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* Estilo para los elementos de la lista */
-    footer li {
-      margin-bottom: 5px; /* Espaciado entre elementos de la lista */
-    }
+ /* estilos del footer */
   
-  /* Estilos para los contenedores de información */
-  footer .info,
-  footer .horarios,
-  footer .contacto,
-  footer .redes-sociales {
-    margin-bottom: 10px;
+ footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
   
-  /* Estilos para la disposición horizontal */
-  footer .info,
-  footer .horarios,
-  footer .contacto {
-    display: inline-block;
-    width: 30%; /* Ajusta según sea necesario */
-    text-align: left;
-    position: relative;
+  /* Estilo para los elementos de la lista */
+  footer li {
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
   }
-  
-  footer .info::after,
-  footer .horarios::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 2px; /* Grosor de la barra vertical */
-    background-color: #b8adad; /* Color de la barra vertical */
-    top: 0;
-    right: 0;
-  }
-  
-  footer .horarios {
-    display: inline-block;
-    width: 30%; /* Ajusta según sea necesario */
-    text-align: center;
-    position: relative;
-  }
-  
-  footer .contacto {
-    display: inline-block;
-    width: 30%; /* Ajusta según sea necesario */
-    text-align: right;
-    position: relative;
-  }
-  
-  /* Estilos para los iconos de redes sociales */
-  footer .redes-sociales {
-    display: flex;
-    justify-content: center;
-  }
-  
-  footer .iconos-sociales {
-    display: flex;
-    align-items: center;
-  }
-  
-  footer .iconos-sociales a {
-    margin: 0 10px;
-  }
-  
-  /* Ajusta el tamaño de los iconos*/
-  footer .iconos-sociales a i {
-    font-size: 24px; 
-  }
+
+/* Estilos para los contenedores de información */
+footer .info,
+footer .horarios,
+footer .contacto,
+footer .redes-sociales {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la disposición horizontal */
+footer .info,
+footer .horarios,
+footer .contacto {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: left;
+  position: relative;
+}
+
+footer .info::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  right: 0;
+}
+
+footer .contacto::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  left: -5px;
+}
+
+
+
+footer .horarios {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: center;
+  position: relative;
+}
+
+footer .contacto {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: right;
+  position: relative;
+}
+
+/* Estilos para los iconos de redes sociales */
+footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+footer .iconos-sociales {
+  display: flex;
+  align-items: center;
+}
+
+footer .iconos-sociales a {
+  margin: 0 10px;
+}
+
+/* Ajusta el tamaño de los iconos*/
+footer .iconos-sociales a i {
+  font-size: 24px; 
+}

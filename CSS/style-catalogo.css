@@ -367,8 +367,7 @@ body {
     position: relative;
   }
   
-  footer .info::after,
-  footer .horarios::after {
+  footer .info::after {
     content: '';
     position: absolute;
     height: 100%;
@@ -377,6 +376,18 @@ body {
     top: 0;
     right: 0;
   }
+
+  footer .contacto::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    left: -5px;
+  }
+ 
+  
   
   footer .horarios {
     display: inline-block;

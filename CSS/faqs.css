@@ -11,11 +11,12 @@ body{
 h1{
     text-align: center;
     color: rgb(244, 245, 243);
+    background: linear-gradient(to right,#d1d1d1 , #020202);
 }
 
 header{
     background-color: #5b6074;
-    background: linear-gradient(to right,#CD323A ,#020202);
+    background: linear-gradient(to right,#CD323A , #020202);
     height: 80px;
     width: 100%;
     top: 0;
@@ -197,100 +198,98 @@ header{
     
 }
 
-
-
 /* Hasta aqui es los estilos de la cabecera */
 
-.comentarios-section-container {
-    width: 60%; /* Ajusta el ancho del contenedor según sea necesario */
-    max-width: 400px; /* Ajusta el ancho máximo del contenedor según sea necesario */
-    background-color: #f4f4f4; /* Ajusta el color de fondo del contenedor según tu diseño */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Para centrar el contenedor horizontalmente */
+ /* estilos del footer */
+  
+ footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
   
-  .comentarios-section {
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    border: 2px solid #ccc;
-    width: 80%; /* Ajusta el ancho del cuadro según sea necesario */
-    max-width: 600px; /* Ajusta el ancho máximo del cuadro según sea necesario */
-    margin: auto; /* Centra el cuadro horizontalmente */
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #4c54af; /* Ajusta el color del botón según tu diseño */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049; /* Ajusta el color del botón al pasar el mouse según tu diseño */
+  /* Estilo para los elementos de la lista */
+  footer li {
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
   }
 
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Estilos para los contenedores de información */
+footer .info,
+footer .horarios,
+footer .contacto,
+footer .redes-sociales {
+  margin-bottom: 10px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #000000; /* Borde general de la tabla */
-  }
-
-  th, td {
-    border: 1px solid #131010; /* Bordes de las celdas */
-    padding: 8px; /* Espaciado interno de las celdas */
-    text-align: left;
-  }
-
-  th {
-    background-color: #000000; /* Color de fondo para las celdas de encabezado */
-  }
-
-  ul {
-    list-style-type: circle;
-    padding: 0; /* Elimina el espacio alrededor de la lista */
-  }
-
-  /* Reduzca el espacio entre el texto y las viñetas */
-  li {
-    margin-bottom: 10px; /* Ajusta el espacio entre elementos de la lista */
-  }
-.social-media{
-    padding: 10px;
+/* Estilos para la disposición horizontal */
+footer .info,
+footer .horarios,
+footer .contacto {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: left;
+  position: relative;
 }
-.social-mediaImg {
-    width: 30px;
-    margin: 0 10px;
+
+footer .info::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  right: 0;
 }
-  
-  .fotoSellosIdeart img {
-    width: 400px; /* O el porcentaje que desees */
-    height: auto; /* Esto mantiene la proporción original de la imagen */
-  }
+
+footer .contacto::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  left: -5px;
+}
+
+
+
+footer .horarios {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: center;
+  position: relative;
+}
+
+footer .contacto {
+    border-bottom: yellowgreen;
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: center;
+  position: relative;
+}
+
+/* Estilos para los iconos de redes sociales */
+footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+footer .iconos-sociales {
+  display: flex;
+  align-items: center;
+}
+
+footer .iconos-sociales a {
+  margin: 0 10px;
+}
+
+/* Ajusta el tamaño de los iconos*/
+footer .iconos-sociales a i {
+  font-size: 24px; 
+}

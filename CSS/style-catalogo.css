@@ -3,14 +3,12 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: Verdana;
-    padding: 0px 0px 0px;
-    background: #8f2c2c;
-}
+
+
 h1{
     text-align: center;
-    color: rgb(244, 245, 243);
+    color: rgb(18, 19, 17);
+    background: linear-gradient(to right,#dad1d1 ,#020202);
 }
 
 header{
@@ -18,12 +16,14 @@ header{
     background: linear-gradient(to right,#CD323A ,#020202);
     height: 80px;
     width: 100%;
+    background-color: #5b6074;
+    background: linear-gradient(to right,#CD323A ,#020202);
     top: 0;
     left: 0;
 }
 
 .nav{
-    display: flex;
+    display: flex;   /*Distribuir bien los elementos a lo largo del nav*/
     justify-content: space-between;
 }
 
@@ -197,80 +197,217 @@ header{
     
 }
 
-
+.btn{
+  width: 55px;
+  height: 50px;
+  background: #130b0b;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  color: rgb(65, 41, 41);
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
 
 /* Hasta aqui es los estilos de la cabecera */
 
 
-.btn{
-    width: 55px;
-    height: 50px;
-    background: #130b0b;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    color: rgb(65, 41, 41);
-    font-size: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-}
 
+
+body {
+    margin: 0;
+    font-family: Verdana;
 
   
-  .producto {
-    background-color: #d6cdcd;
-    border: 1px solid #999191;
-    margin: 20px;
+  }
+
+ 
+  .contenedor {
+    display: flex;
+    max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centra el contenido */
+  }
+  
+  .menu-lateral {
+    width: 200px; /* Ancho del menú lateral */
+    background-color: #333;
+    color: white;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    box-sizing: border-box;
+    transition: width 0.3s; /* Transición de ancho */
   }
   
-  .producto img {
-    width: 300px;
-    height: 400px; 
-
+  .menu-lateral ul {
+    list-style: none;
+    padding: 0;
   }
   
-  .descripcion {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+  .menu-lateral li {
+    margin-bottom: 10px;
   }
   
-  .boton-descripcion {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
+  .menu-lateral a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Transición de color al pasar el mouse */
   }
   
-  .boton-comprar {
-    background-color: #27ae60;
-    color: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
+  .menu-lateral a:hover {
+    color: #be1515; /* Color al pasar el mouse */
+  
   }
   
-  .boton-descripcion:hover, .boton-comprar:hover {
-    background-color: #1a609c;
-  }
-  
-  .productos-container {
+  .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
   }
   
-  .producto {
-    width: 48%; /* Ajusta el ancho de los productos según sea necesario */
-    margin-bottom: 20px;
+  .product {
+    position: relative;
+    width: calc(18% - 20px);
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+  }
+  
+  .product:hover img {
+    transform: translateY(-20px);
+  }
+  
+  .product:hover .overlay {
+    transform: translateY(0);
+  }
+  
+  .overlay button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .overlay button:hover {
+    background-color: #0056b3;
+  }
+
+
+  .description-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .description-content.active {
+    transform: translateY(0);
+  }
+
+
+ /* estilos del footer */
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Estilo para los elementos de la lista */
+    footer li {
+      margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+    }
+  
+  /* Estilos para los contenedores de información */
+  footer .info,
+  footer .horarios,
+  footer .contacto,
+  footer .redes-sociales {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la disposición horizontal */
+  footer .info,
+  footer .horarios,
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: left;
+    position: relative;
+  }
+  
+  footer .info::after,
+  footer .horarios::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    right: 0;
+  }
+  
+  footer .horarios {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: center;
+    position: relative;
+  }
+  
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right;
+    position: relative;
+  }
+  
+  /* Estilos para los iconos de redes sociales */
+  footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .iconos-sociales {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .iconos-sociales a {
+    margin: 0 10px;
+  }
+  
+  /* Ajusta el tamaño de los iconos*/
+  footer .iconos-sociales a i {
+    font-size: 24px; 
   }

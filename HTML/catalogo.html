@@ -9,14 +9,14 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../CSS/style-catalogo.css" />
-    <script defer src="../index.js"></script>
+    <script defer src="../JS/catalogo.js"></script>
   </head>
+
   <body>
     <header>
       <nav class="nav">
-        <a href="../index.html" class="logo"
-          ><img class="imgLogo" src="../imagenes/logoNegro.png" alt="Ideart"
-        /></a>
+        <a href="../index.html" class="logo">
+          <img class="imgLogo" src="../imagenes/logoNegro.png" alt="Ideart"/></a>
         <div class="buscar">
           <input type="text" placeholder="Buscar" required />
           <div class="btn">
@@ -44,60 +44,119 @@
         </ul>
       </nav>
     </header>
-    <div class="producto">
-      <img src="..\imagenes/selloAutomatico.jpeg" alt="Producto 1" />
-      <h3>Sello Automatico</h3>
-      <p class="descripcion">
-        Descripción del Producto 1. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Vestibulum euismod, arcu sit amet ultricies fringilla,
-        urna odio semper nulla.
-      </p>
-      <div class="botones">
-        <button class="boton-comprar">Comprar</button>
-        <button class="boton-descripcion">Descripción</button>
+    <h1>SELLOS</h1>
+    <div class="contenedorMenuLateral">
+      <!-- Menú lateral izquierdo -->
+      <nav class="menu-lateral">
+        <ul>
+          <li><a href="#">Jarros</a></li>
+          <li><a href="#">Tintas</a></li>
+          <li><a href="#">Almohadillas</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="product">
+          <img src="../imagenes/Sello Fechador.jpeg" alt="Product 1">
+          <div class="overlay">
+            <button class="buy-btn">Comprar</button>
+            <button class="description-btn">Descripción</button>
+            <div class="description-content">
+              <p>Descripción del producto 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="../imagenes/selloAutomatico.jpeg" alt="Product 2">
+          <div class="overlay">
+            <button class="buy-btn">Comprar</button>
+            <button class="description-btn">Descripción</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="../imagenes/selloMaderaRedondo.jpeg" alt="Product 3">
+          <div class="overlay">
+            <button class="buy-btn">Comprar</button>
+            <button class="description-btn">Descripción</button>
+          </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/selloPortatil.jpeg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/esfero.jpeg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/../imagenes/sellaViena.jpg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/../imagenes/selloNumeradora.jpg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/../imagenes/selloSeco.jpg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../imagenes/selloMaderaRedon.jpeg" alt="Product 3">
+            <div class="overlay">
+              <button class="buy-btn">Comprar</button>
+              <button class="description-btn">Descripción</button>
+            </div>
+          </div>
+          
       </div>
-    </div>
 
-    <div class="producto">
-      <img src="..\imagenes/Sello Fechador.jpeg" alt="Producto 2" />
-      <h3>Sello Fechador</h3>
-      <p class="descripcion">
-        Descripción del Producto 2. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Vestibulum euismod, arcu sit amet ultricies fringilla,
-        urna odio semper nulla.
-      </p>
-      <div class="botones">
-        <button class="boton-comprar">Comprar</button>
-        <button class="boton-descripcion">Descripción</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="..\imagenes/selloMaderaRedondo.jpeg" alt="Producto 3" />
-      <h3>Sello Madera</h3>
-      <p class="descripcion">
-        Descripción del Producto 2. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Vestibulum euismod, arcu sit amet ultricies fringilla,
-        urna odio semper nulla.
-      </p>
-      <div class="botones">
-        <button class="boton-comprar">Comprar</button>
-        <button class="boton-descripcion">Descripción</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="..\imagenes/selloPortatil.jpeg" alt="Producto 4" />
-      <h3>Sello Fechador</h3>
-      <p class="descripcion">
-        Descripción del Producto 2. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Vestibulum euismod, arcu sit amet ultricies fringilla,
-        urna odio semper nulla.
-      </p>
-      <div class="botones">
-        <button class="boton-comprar">Comprar</button>
-        <button class="boton-descripcion">Descripción</button>
-      </div>
-    </div>
+      <footer>
+        <div class="info">
+          <p>Dirección: Av. de la República 1798, Quito 170135, Ecuador</p>
+        </div>
+  
+        <div class="horarios">
+          <p>Horarios de Atención:</p>
+          <ul>
+            <li><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</li>
+            <li><strong>Sábado:</strong> 10:00 AM - 2:00 PM</li>
+          </ul>
+        </div>
+  
+        <div class="contacto">
+          <p>Contacto: sellosideart@gmail.com | Teléfono: +593 99 8030810</p>
+        </div>
+  
+        <div class="redes-sociales">
+          <div class="iconos-sociales">
+            <a
+              class="social-mediaImg"
+              href="https://www.facebook.com/IdeartSellosSellos/"
+            >
+              <i class="fa-brands fa-instagram" style="color: #c2ccdf"></i>
+            </a>
+            <a
+              class="social-mediaImg"
+              href="https://www.facebook.com/IdeartSellosSellos/"
+            >
+              <i class="fa-brands fa-facebook-f" style="color: #bfc3cb"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>

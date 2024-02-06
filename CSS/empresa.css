@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+ 
+}
+
+body{
+    font-family: Verdana;
+     background: #e5e5e5ac;
+}
+
+header{
+    background-color: #5f657c;
+    background: linear-gradient(to right,#CD323A , #020202);
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink{
+    color: white;
+    text-decoration: none;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+
+.imgLogo{
+    height: 70px;
+    width: 70px;
+    margin-left: 10%;
+    margin-top: 5%;
+    line-height: 80px;
+}
+
+.navMenu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.navMenuItem{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.navMenuLink:hover{
+    background-color: #6b3f3f;
+    transition: 0.5s;
+}
+
+.toggle{
+    color: #5a5959;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.buscar{
+    position: relative;
+    top: 15px;
+    margin-left: 20 px;
+    padding: 5px;
+}
+
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn{
+    width: 55px;
+    height: 50px;
+    background: #130b0b;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(65, 41, 41);
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.barra{
+    background: rgb(90, 87, 87);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+}
+
+@keyframes scroll1 {
+    100%{
+        width: 100%;
+    }
+}
+
+.progreso{
+    height: 100%;
+    width: 0px;
+    background: rgb(225, 213, 213);
+    animation: scroll1 auto linear forwards;
+    animation-timeline: scroll();
+}
+
+
+@media(max-width: 760px){
+    body{
+        padding-top: 0px;
+    }
+    
+    header{
+        height: 60px;
+    }
+    
+    .imgLogo{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .navMenu{
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #5b6074;
+        background: linear-gradient(to right, #CD323A, #272829);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .navMenuItem{
+        line-height: 70px;
+    }
+    
+    .navMenuLink:hover{
+        background: none;
+        color:#cfa8a8;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    .navMenu_visible{
+        left:0;
+    }
+    .buscar{
+        top: 6px;
+        padding: 5px;
+    }
+    
+}
+
+ /* estilos para el body */
+ .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagen-titulo {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ajusta la altura de la imagen principal */
+    overflow: hidden;
+  }
+  
+  .imagen-titulo img {
+    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho */
+    height: auto;
+    object-fit: cover; /* Escala la imagen para que cubra todo el contenedor */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .imagen-titulo h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Puedes ajustar el color del texto según tus necesidades */
+    margin: 0;
+    font-size: 40px;
+  }
+  
+  .imagen-subtitulo {
+    text-align: center;
+  transition: transform 0.3s ease; /* Transición de movimiento */
+  width: 45%; /* Ajuste del ancho para mayor espacio entre las imágenes */
+  overflow: hidden; /* Para cortar cualquier exceso de la imagen */
+  border: 2px solid #ddd; /* Borde sólido con color gris */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  
+  }
+  
+  .imagen-subtitulo img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .seccion {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .imagen-subtitulo:hover {
+    transform: translateY(1%); /* Efecto de levantamiento al hacer hover */
+  }
+
+
+  .texto {
+    text-align: justify; /* Alineación justificada para el texto */
+    margin: 0 20px; /* Márgenes para separar el texto de los lados */
+  }
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo para los elementos de la lista */
+  footer li {
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+  }
+
+/* Estilos para los contenedores de información */
+footer .info,
+footer .horarios,
+footer .contacto,
+footer .redes-sociales {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la disposición horizontal */
+footer .info,
+footer .horarios,
+footer .contacto {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: left;
+  position: relative;
+}
+
+footer .info::after,
+footer .horarios::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  right: 0;
+}
+
+footer .horarios {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: center;
+  position: relative;
+}
+
+footer .contacto {
+  display: inline-block;
+  width: 30%; /* Ajusta según sea necesario */
+  text-align: right;
+  position: relative;
+}
+
+/* Estilos para los iconos de redes sociales */
+footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+footer .iconos-sociales {
+  display: flex;
+  align-items: center;
+}
+
+footer .iconos-sociales a {
+  margin: 0 10px;
+}
+
+/* Ajusta el tamaño de los iconos*/
+footer .iconos-sociales a i {
+  font-size: 24px; 
+}

@@ -11,6 +11,7 @@ body{
 h1{
     text-align: center;
     color: rgb(244, 245, 243);
+    background: linear-gradient(to right,#d1d1d1 , #020202);
 }
 
 header{
@@ -275,61 +276,77 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #000000; /* Borde general de la tabla */
   }
-
-  th, td {
-    border: 1px solid #131010; /* Bordes de las celdas */
-    padding: 8px; /* Espaciado interno de las celdas */
-    text-align: left;
-  }
-
-  th {
-    background-color: #000000; /* Color de fondo para las celdas de encabezado */
-  }
-
-  ul {
-    list-style-type: circle;
-    padding: 0; /* Elimina el espacio alrededor de la lista */
-  }
-
-  /* Reduzca el espacio entre el texto y las viñetas */
-  li {
-    margin-bottom: 10px; /* Ajusta el espacio entre elementos de la lista */
-  }
-.social-media{
-    padding: 10px;
-}
-.social-mediaImg {
-    width: 30px;
-    margin: 0 10px;
-}
+  footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Estilo para los elementos de la lista */
+    footer li {
+      margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+    }
   
-  .fotoSellosIdeart img {
-    width: 400px; /* O el porcentaje que desees */
-    height: auto; /* Esto mantiene la proporción original de la imagen */
+  /* Estilos para los contenedores de información */
+  footer .info,
+  footer .horarios,
+  footer .contacto,
+  footer .redes-sociales {
+    margin-bottom: 10px;
   }
-  /* revisar de aqui para abajo */
-  .submenu {
-  display: none;
-  position: absolute;
-  background-color: #fff; /* Puedes ajustar el color de fondo según tu diseño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.submenu a {
-  color: #333; /* Puedes ajustar el color del texto según tu diseño */
-  padding: 10px;
-  display: block;
-  text-decoration: none;
-}
-
-.submenu a:hover {
-  background-color: #f5f5f5; /* Puedes ajustar el color de fondo al pasar el mouse */
-}
+  
+  /* Estilos para la disposición horizontal */
+  footer .info,
+  footer .horarios,
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: left;
+    position: relative;
+  }
+  
+  footer .info::after,
+  footer .horarios::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    right: 0;
+  }
+  
+  footer .horarios {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: center;
+    position: relative;
+  }
+  
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right;
+    position: relative;
+  }
+  
+  /* Estilos para los iconos de redes sociales */
+  footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .iconos-sociales {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .iconos-sociales a {
+    margin: 0 10px;
+  }
+  
+  /* Ajusta el tamaño de los iconos*/
+  footer .iconos-sociales a i {
+    font-size: 24px; 
+  }

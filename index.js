@@ -33,4 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
       catalogoSubMenu.style.display = "none";
     });
   });
+
+  function initMap() {
+    // Coordenadas del local
+    var local = {lat: -0.180653, lng: -78.467834}; // Reemplaza con las coordenadas de tu local
+
+    // Crear un nuevo mapa en el contenedor con id "map"
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: local, // Centrar el mapa en las coordenadas del local
+        zoom: 15 // Nivel de zoom del mapa
+    });
+
+    // Crear un marcador en las coordenadas del local
+    var marker = new google.maps.Marker({
+        position: local,
+        map: map,
+        title: 'Mi Local' // Título del marcador
+    });
+}
   

@@ -14,3 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  function showProducts() {
+    var productContainer = document.getElementById('productContainer');
+    productContainer.classList.add('show');
+  }

@@ -269,6 +269,11 @@ header{
     width: 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
   }
 }
+
+#map {
+  height: 400px; /* Altura del mapa */
+  width: 100%; /* Ancho del mapa */
+}
     
 
  /* estilos del footer */

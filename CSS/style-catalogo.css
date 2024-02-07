@@ -219,6 +219,8 @@ header{
   cursor: pointer;
 }
 
+
+
 /* Hasta aqui es los estilos de la cabecera */
 
 
@@ -231,6 +233,8 @@ header{
     flex-wrap: wrap;
     margin-top: 10px;
     justify-content: space-between;
+    margin-left: 220px;
+    position: relative;
 }
 
 .product {
@@ -328,6 +332,69 @@ header{
   }
 }
 
+/* barra lateral */
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    top: calc(100% + 10px); /* Comienza un poco más arriba de la imagen */
+    left: 0;
+    z-index: 100; /* Asegura que esté encima del contenido principal pero debajo del footer */
+    transition: height 0.3s; /* Transición suave para el cambio de altura */
+    height: 500px; /* Ajusta la altura inicial */
+}
+
+/* Estilos para la barra lateral cuando el mouse está sobre ella */
+.sidebar:hover {
+    height: calc(100% + 50px); /* Alarga un poco la barra lateral al pasar el mouse sobre ella */
+}
+
+/* Estilos para la lista dentro de la barra lateral */
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ccc; /* Cambia el color al pasar el mouse sobre cada opción */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* La barra lateral ocupa el ancho completo en dispositivos pequeños */
+        top: auto; /* Elimina la posición absoluta en dispositivos pequeños */
+        bottom: 0; /* La barra lateral comienza desde la parte inferior en dispositivos pequeños */
+        height: auto; /* La altura se ajusta automáticamente en dispositivos pequeños */
+        transition: none; /* Elimina la transición en dispositivos pequeños */
+    }
+
+    /* Estilos para la barra lateral cuando está fija en la parte inferior en dispositivos pequeños */
+    .sidebar.fixed-bottom {
+        position: fixed;
+        left: 0;
+    }
+
+    /* Estilos para la barra lateral cuando el mouse está sobre ella en dispositivos pequeños */
+    .sidebar:hover {
+        height: auto; /* La altura se ajusta automáticamente al pasar el mouse en dispositivos pequeños */
+    }
+}
+
 
 /* estilos del footer */
   
@@ -336,6 +403,8 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+  position: relative;
+  z-index: 101;
 }
 footer ul {
     list-style-type: none;

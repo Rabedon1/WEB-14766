@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Verdana;
   background-color: #fcfcfe;
-  background: linear-gradient(to right,#6b3c3c, #4e4848, #917181);
+  background: linear-gradient(to right,#f8f8f8, #a49d9d, #7e7178);
     background-size: 400%;
     animation: fondo-anim 5s infinite alternate;
 }
@@ -21,7 +21,7 @@ body {
 h1{
     text-align: center;
     color: rgb(18, 19, 17);
-    background:rgb(223, 200, 200);
+    background:rgb(193, 191, 191);
 }
 
 header{
@@ -194,7 +194,7 @@ header{
     
     .navMenuLink:hover{
         background: none;
-        color:#cfa8a8;
+        color:hsl(0, 82%, 26%);
     }
 
     .toggle{
@@ -208,6 +208,28 @@ header{
         top: 6px;
         padding: 5px;
     }
+
+    .navMenu2{
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #5b6074;
+        background: linear-gradient(to right, #CD323A, #272829);
+        position: fixed;
+        left: 100;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        left: 100%;
+        transition: right 0.3s;
+        
+    }
+
+   
+    
     
 }
 
@@ -228,14 +250,17 @@ header{
 
 
 
+
 /* Hasta aqui es los estilos de la cabecera */
 
 
 
   /* pagina principal */
-
-  
-
+.nav2{
+    display: flex;
+    list-style: none;
+    justify-content: center; 
+}
 
 .imagenPrincipal{
     display: flex;
@@ -270,7 +295,7 @@ header{
     overflow: hidden; /* Asegura que el contenido no se desborde */
     position: relative;
     text-align: center;
-    background: rgb(223, 200, 200);
+    background: rgb(237, 235, 235);
     
 }
 

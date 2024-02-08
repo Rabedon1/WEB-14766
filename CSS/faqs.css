@@ -208,20 +208,20 @@ header{
     height: 300px; /* Establece un tamaño fijo para las tarjetas */
     overflow: hidden; /* Asegura que el contenido no se desborde */
     position: relative;
-    text-align: center;
 }
   
 .contenedorPreguntas {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px; /* Agrega espacio entre las columnas y las filas */
+    text-align: center;
     align-items: center;
 }
 
 @media(max-width: 760px){
     .contenedorPreguntas{
         gap: 10px;
-        grid-template-columns:  1fr; /* Reduce el número de columnas en dispositivos pequeños */
+        grid-template-columns: 1fr 1fr; /* Reduce el número de columnas en dispositivos pequeños */
     }
 }
   

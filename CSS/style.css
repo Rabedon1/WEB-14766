@@ -225,56 +225,12 @@ header{
     opacity: 1;
     filter: contrast(120%);
   }
-
-.aboutUS-section {
-    display: flex;
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: left;
-    border-radius: 8px; 
-    margin: 20px auto;
+.infoAdicional{
+  display: flex;
+  background: whitesmoke;
 }
 
 
-/* Estilo para cada aside dentro de aboutUS-section */
-.about-us-aside,
-.fotoSellosIdeart {
-  width: 45%; /* Ajusta el ancho según tus necesidades */
-  box-sizing: border-box;
-  padding: 20px;
-  margin: 10px;
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-  .about-us-aside,
-  .fotoSellosIdeart {
-    width: 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
-  }
-}
-
-/* Estilo para cada aside dentro de aboutUS-section */
-.about-us-aside,
-.fotoSellosIdeart {
-  width: 45%; /* Ajusta el ancho según tus necesidades */
-  box-sizing: border-box;
-  padding: 20px;
-  margin: 10px;
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-  .about-us-aside,
-  .fotoSellosIdeart {
-    width: 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
-  }
-}
-
-#map {
-  height: 400px; /* Altura del mapa */
-  width: 100%; /* Ancho del mapa */
-}
-    
 
  /* estilos del footer */
   

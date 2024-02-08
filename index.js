@@ -3,7 +3,7 @@ const Toggle = document.querySelector(".toggle")
 const NavMenu = document.querySelector(".navMenu")
 
 Toggle.addEventListener("click", ()=>{
-    NavMenu.classList.toggle("navMenu_visible")
+    NavMenu.classList.toggle("navMenu_visible")  
 })
 
 // Scripts de el registro e inicio de sesion

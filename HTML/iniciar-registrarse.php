@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-
+    <h1 class="titulo">IDEART</h1>
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form action="../index.html" method="post" id="nivelacionForm" onsubmit="return validarFormulario();" enctype="multipart/form-data">

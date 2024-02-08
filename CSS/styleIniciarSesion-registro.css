@@ -28,7 +28,7 @@ body{
 @keyframes fondo-anim {
     0% {background-position: left;}
     100% {background-position: right;}
-  }
+}
 
 .container{
     background-color: #635b5b;
@@ -39,6 +39,7 @@ body{
     width: 840px;
     max-width: 100%;
     min-height: 480px;
+
 }
 
 .container p{

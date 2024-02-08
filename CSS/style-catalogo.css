@@ -7,6 +7,13 @@ body {
   margin: 0;
   font-family: Verdana;
   background-color: #fcfcfe;
+  background: linear-gradient(to right,#6b3c3c, #4e4848, #917181);
+    background-size: 400%;
+    animation: fondo-anim 5s infinite alternate;
+}
+@keyframes fondo-anim {
+    0% {background-position: left;}
+    100% {background-position: right;}
 }
 
 
@@ -14,7 +21,7 @@ body {
 h1{
     text-align: center;
     color: rgb(18, 19, 17);
-    background: linear-gradient(to right,#b8b4b4 ,#d8b8b8);
+    background:rgb(223, 200, 200);
 }
 
 header{
@@ -228,25 +235,43 @@ header{
   /* pagina principal */
 
   
-  .container {
+
+
+.imagenPrincipal{
     display: flex;
-    flex-wrap: wrap;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 10px;
     justify-content: space-between;
-    margin-left: 220px;
+    position: relative;
+    width: 100%;
+}
+
+.contenedorImagenPrincipal{
+    display: flex;
+    width: 100%;
+    height: 700px;
     position: relative;
 }
 
 .product {
-    position: relative;
-    width: calc(18% - 20px);
     margin: 10px;
-    overflow: hidden;
-    height: 270px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    grid-column: span 1; /* Ocupa una columna completa */
+    grid-row: span 1; /* Ocupa una fila completa */
+    margin-bottom: 20px; /* Agrega margen entre las tarjetas */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    position: relative;
+    text-align: center;
+    background: rgb(223, 200, 200);
+    
 }
 
 .product img {
@@ -320,81 +345,14 @@ header{
 
 /* Consulta de medios para dispositivos pequeños */
 @media (max-width: 768px) {
-  .product {
-      width: calc(33.333% - 20px); 
+  .container {
+      grid-template-columns: repeat(2, 1fr); 
   }
-}
-
-/* Consulta de medios para dispositivos extra pequeños */
-@media (max-width: 576px) {
-  .product {
-      width: calc(50% - 20px); 
+  .contenedorImagenPrincipal{
+    height: 500px;
   }
+
 }
-
-/* barra lateral */
-.sidebar {
-    background-color: #f4f4f4;
-    padding: 20px;
-    width: 200px;
-    position: absolute;
-    top: calc(100% + 10px); /* Comienza un poco más arriba de la imagen */
-    left: 0;
-    z-index: 100; /* Asegura que esté encima del contenido principal pero debajo del footer */
-    transition: height 0.3s; /* Transición suave para el cambio de altura */
-    height: 500px; /* Ajusta la altura inicial */
-}
-
-/* Estilos para la barra lateral cuando el mouse está sobre ella */
-.sidebar:hover {
-    height: calc(100% + 50px); /* Alarga un poco la barra lateral al pasar el mouse sobre ella */
-}
-
-/* Estilos para la lista dentro de la barra lateral */
-.sidebar ul {
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    list-style: none;
-    margin-bottom: 10px; /* Espacio entre elementos de la lista */
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.sidebar ul li a:hover {
-    background-color: #ccc; /* Cambia el color al pasar el mouse sobre cada opción */
-}
-
-/* Estilos responsive */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* La barra lateral ocupa el ancho completo en dispositivos pequeños */
-        top: auto; /* Elimina la posición absoluta en dispositivos pequeños */
-        bottom: 0; /* La barra lateral comienza desde la parte inferior en dispositivos pequeños */
-        height: auto; /* La altura se ajusta automáticamente en dispositivos pequeños */
-        transition: none; /* Elimina la transición en dispositivos pequeños */
-    }
-
-    /* Estilos para la barra lateral cuando está fija en la parte inferior en dispositivos pequeños */
-    .sidebar.fixed-bottom {
-        position: fixed;
-        left: 0;
-    }
-
-    /* Estilos para la barra lateral cuando el mouse está sobre ella en dispositivos pequeños */
-    .sidebar:hover {
-        height: auto; /* La altura se ajusta automáticamente al pasar el mouse en dispositivos pequeños */
-    }
-}
-
 
 /* estilos del footer */
   

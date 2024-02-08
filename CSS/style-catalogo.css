@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Verdana;
   background-color: #fcfcfe;
-  background: linear-gradient(to right,#f8f8f8, #a49d9d, #7e7178);
+  background: linear-gradient(to right,#f8f8f8, #b1abab, #676565);
     background-size: 400%;
     animation: fondo-anim 5s infinite alternate;
 }
@@ -21,7 +21,9 @@ body {
 h1{
     text-align: center;
     color: rgb(18, 19, 17);
-    background:rgb(193, 191, 191);
+    background:676565;
+    margin-top: 20px;
+    
 }
 
 header{

@@ -6,7 +6,7 @@
 body{
     font-family: Verdana;
     padding: 0px 0px 0px;
-    background: #8f2c2c;
+    background: linear-gradient(to right,#ce6f6f , #020202);
 }
 h1{
     text-align: center;
@@ -241,12 +241,12 @@ header{
 }
 
 .tarjeta .front {
-    background-color: #e7c8c8;
+    background-color: #e7e2e2;
     z-index: 2;
 }
   
 .tarjeta .back {
-    background-color: #504b4b;
+    background-color: #b6b6b6;
     transform: rotateY(180deg);
     z-index: 1;
 }

@@ -281,6 +281,11 @@ header{
   }
 }
 
+p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+}
  
 /* estilos del footer */
   

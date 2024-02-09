@@ -278,6 +278,31 @@ header{
     font-family: system-ui;
     line-height: 18px;
 }
+.carrito{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    
+    
+} 
+.carrito div{
+    position: relative;
+}
+.carrito p{
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: red;
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
 .logo{
     width: 164px;
     height: 84px;
@@ -288,17 +313,43 @@ header{
     width: 39px;
     height: 38px;
 }
-.cart-products{
-    position: absolute!important;
-    top: 82px;
-    right: -18px;
-    background-color: #fff;
-    padding: 0 18px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-    display: none;
 
-    min-width: 290px;
+
+.cart-products img {
+    max-width: 100px; /* Establecer el ancho máximo de las imágenes */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    margin-bottom: 5px; /* Agregar un pequeño espacio entre las imágenes */
+  }
+  
+.cart-products {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    padding: 5px; /* Reducir el espacio interno */
+    max-height: calc(100vh - 200px); /* Mantener la altura máxima relativa al tamaño de la ventana */
+    overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede la altura */
 }
+  
+.cart-products h3 {
+    margin-top: 10px; /* Reducir el margen superior de los títulos */
+    font-size: 14px; /* Reducir el tamaño de fuente de los títulos */
+}
+  
+.cart-products p {
+    margin-bottom: 5px; /* Reducir el espacio entre párrafos */
+}
+  
+.cart-products .close-btn {
+    font-size: 10px; /* Reducir el tamaño de fuente del botón de cierre */
+    padding: 2px 6px; /* Reducir el espacio dentro del botón de cierre */
+}
+  
+.cart-products .card-items {
+    margin-top: 10px; /* Reducir el espacio entre los elementos del carrito */
+}
+  
+  .cart-products .price-total {
+    font-size: 16px; /* Ajustar el tamaño de fuente del total */
+}
+    
 
 .cart:hover{
     margin-bottom: 16px;
@@ -309,7 +360,7 @@ header{
 .nav2{
     display: flex;
     list-style: none;
-    justify-content: right; 
+    justify-content: center; 
     
 }
 
@@ -319,7 +370,7 @@ header{
     flex-grow: 1;
     object-fit: cover;
 }
-.container {
+.products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 10px;
@@ -335,7 +386,7 @@ header{
     position: relative;
 }
 
-.product {
+.carts {
     margin: 10px;
     border: 1px solid #ccc; 
     border-radius: 5px; 
@@ -350,7 +401,7 @@ header{
     
 }
 
-.product img {
+.carts img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
@@ -368,24 +419,24 @@ header{
     transform: translateY(100%);
 }
 
-.product:hover img {
+.carts:hover img {
     transform: translateY(-20px);
 }
 
-.product h3 {
+.carts h3 {
     margin-top: 20px; 
     transition: transform 0.3s ease; 
 }
 
-.product:hover {
+.carts:hover {
     transform: translateY(-10px); 
 }
 
-.product:hover h3 {
+.carts:hover h3 {
     transform: translateY(-10px); 
 }
 
-.product:hover .overlay {
+.carts:hover .overlay {
     transform: translateY(0);
 }
 
@@ -421,7 +472,7 @@ header{
 
 /* Consulta de medios para dispositivos pequeños */
 @media (max-width: 768px) {
-  .container {
+  .products {
       grid-template-columns: repeat(2, 1fr); 
   }
   .contenedorImagenPrincipal{

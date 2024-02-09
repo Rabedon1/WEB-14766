@@ -7,6 +7,25 @@ Toggle.addEventListener("click", ()=>{
 })
 
 // Scripts de el registro e inicio de sesion
+function registrar() {
+
+    var nombre = document.getElementById("nombre").value;
+    var apellidos = document.getElementById("apellidos").value;
+    var correo = document.getElementById("correo").value;
+    var contraseña = document.getElementById("contraseña").value;
+
+   
+    window.location.href = "../index.html";
+}
+
+function iniciarSesion() {
+    
+    var email = document.getElementById("email").value;
+    var contrasena = document.getElementById("contrasena").value;
+
+    window.location.href = "../index.html";
+}
+
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');

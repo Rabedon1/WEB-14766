@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../CSS/style-catalogo.css" />
     <link rel="icon" href="../imagenes/logoNegro.png" type="image/x-icon" />
     <script defer src="../JS/catalogo.js"></script>
-    <script defer src="../index.js"></script>
+    <script defer src="../JS/index.js"></script>
   </head>
 
   <body>
@@ -38,18 +38,14 @@
             <a href="faqs.html" class="navMenuLink navLink">FAQs</a>
           </li>
           <li class="navMenuItem">
-            <a href="iniciar-registrarse.php" class="navMenuLink navLink"
+            <a href="iniciar-registrarse.html" class="navMenuLink navLink"
               >Mi Cuenta</a>
           </li>
         </ul>
       </nav>
     </header>
     <div class="contenedorImagenPrincipal">
-      <img
-        class="imagenPrincipal"
-        src="../imagenes/fotoGrandeCatalogo.png"
-        alt="Foto grande"
-      />
+      <img class="imagenPrincipal" src="../imagenes/fotoGrandeCatalogo.png" alt="Foto grande">
     </div>
 
     <h1>SELLOS</h1>
@@ -79,123 +75,140 @@
         </li>
       </ul>
     </nav>
+    <div class="carrito">
+      <div>
+        <img onclick="showCart(this)" class="cart" src="../imagenes/cart.png" alt="">
+        <p class="count-product">0</p>
+      </div>
+      <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()">X</p>
+        <h3>Mi carrito</h3>
+        <div class="card-items"></div>
+        <h2>Total: $<strong class="price-total">0</strong></h2>
+      </div>
+    </div>
 
     <div class="container">
-      <div class="product">
-        <h3>Sello Fechador</h3>
-        <img
-          id="imagenFechador"
-          src="../imagenes/Sello Fechador.jpeg"
-          alt="Product 1"
-        />
+      <div class="products">
+      <div class="carts">
+        <img src="../imagenes/Sello Fechador.jpeg" alt=""/>
+        <p class="title">Fechador</p> 
+        <p><span>18</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="1" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Dispositivo compacto para marcar la fecha en documentos, con
-              ajuste manual de día, mes y año. Precio: $20
+              ajuste manual de día, mes y año.
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Automatico</h3>
-        <img src="../imagenes/SelladorHojas.png" alt="Product 2" />
+      <div class="carts">
+        <img src="../imagenes/SelladorHojas.png" alt="" />
+        <p class="title">Sello Automatico</p>
+        <p><span>15</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" class="btn-add-cart" data-id="2">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Sello que permite estampar rápidamente información en documentos
               con un solo movimiento, utilizando una almohadilla de tinta
-              incorporada y un mecanismo de resorte Precio: $15
+              incorporada y un mecanismo de resorte 
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Madera Redondo</h3>
-        <img src="../imagenes/selloMaderaRedondo.jpeg" alt="Product 3" />
+      <div class="carts">
+        
+        <img src="../imagenes/selloMaderaRedondo.jpeg" alt="" />
+        <p class="title">Sello Madera Redondo</p>
+        <p><span>15.50</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="3" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Herramienta tradicional para estampar diseños personalizados en
-              papel u otros materiales, ideal para proyectos creativos. Precio:
-              $8
+              papel u otros materiales, ideal para proyectos creativos.
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Portatil</h3>
-        <img src="../imagenes/selloPortatil.jpeg" alt="Product 4" />
+      <div class="carts">
+        <img src="../imagenes/selloPortatil.jpeg" alt="" />
+        <p class="title">Sello Portatil</p>
+        <p><span>8</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="4" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Dispositivo compacto y móvil para estampar diseños o información
               en documentos sobre la marcha, ideal para profesionales en
-              movimiento.. Precio: $10
+              movimiento
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Esferográfico</h3>
-        <img src="../imagenes/esfero.jpeg" alt="Product 3" />
+      <div class="carts">
+        <img src="../imagenes/esfero.jpeg" alt="" />
+        <p class="title">Esferográfico</p>
+        <p><span>14</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="5" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Sello personalizado con un diseño circular o esférico, que se
               utiliza comúnmente para marcar logotipos, firmas o información en
-              documentos y materiales promocionales. Precio: $18
+              documentos y materiales promocionales.
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Viena</h3>
-        <img src="../imagenes/../imagenes/sellaViena.jpg" alt="Product 5" />
+      <div class="carts">
+        <img src="../imagenes/../imagenes/sellaViena.jpg" alt="" />
+        <p class="title">Sello Viena</p>
+        <p><span>10</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="6" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Herramienta clásica para estampar diseños personalizados en papel,
-              con un estilo elegante y distintivo. Precio: $10
+              con un estilo elegante y distintivo.
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Numeradora</h3>
+      <div class="carts">
         <img
           src="../imagenes/../imagenes/selloNumeradora.jpg"
           alt="Product 6"
         />
+        <p class="title">Sello Numeradora</p>
+        <p><span>23.99</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="7" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
               Dispositivo especializado para marcar secuencialmente números en
               documentos, útil para numerar facturas, recibos y otros registros.
-              Precio: $25
+              Precio
             </p>
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Seco</h3>
-        <img src="../imagenes/../imagenes/selloSeco.jpg" alt="Product 7" />
+      <div class="carts">
+        <img src="../imagenes/../imagenes/selloSeco.jpg" alt="" />
+        <p class="title">Sello Seco</p>
+        <p><span>20</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="8" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
@@ -206,11 +219,12 @@
           </div>
         </div>
       </div>
-      <div class="product">
-        <h3>Sello Madera</h3>
-        <img src="../imagenes/selloMadera.jpg" alt="Product 8" />
+      <div class="carts">
+        <img src="../imagenes/selloMadera.jpg" alt="" />
+        <p class="title">Sello de Madera<br/>
+          <p><span>7</span>$</p>
         <div class="overlay">
-          <button class="buy-btn">Comprar</button>
+          <button href="" data-id="9" class="btn-add-cart">Agregar</button>
           <button class="description-btn">Descripción</button>
           <div class="description-content">
             <p>
@@ -219,6 +233,7 @@
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <footer>
@@ -256,4 +271,12 @@
       </div>
     </footer>
   </body>
+  <script>
+    function showCart(x) {
+    document.getElementById("products-id").style.display = "block";
+    }
+    function closeBtn() {
+      document.getElementById("products-id").style.display = "none";
+    }
+  </script>
 </html>

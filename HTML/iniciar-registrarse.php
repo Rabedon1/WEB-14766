@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-container sign-up">
             <form action="../index.html" method="post" id="nivelacionForm" onsubmit="return validarFormulario();" enctype="multipart/form-data">
                 <h1>Crear Cuenta</h1>
-                <input placeholder="Nombre" type="text" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios (si es hijo de Elon Musk salado)" name="nombre" required>
-                <input placeholder="Apellido" type="text" id="apellidos"  pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios (si es hijo de Elon Musk salado)" name="apellidos" required>
+                <input placeholder="Nombre" type="text" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios " name="nombre" required>
+                <input placeholder="Apellido" type="text" id="apellidos"  pattern="[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+" title="Solo se permiten letras y espacios " name="apellidos" required>
                 <input placeholder="Correo" type="email" id="correo" name="correo" required>
                 <input placeholder="Contraseña" type="password" id="contraseña" name="contraseña" required>
     

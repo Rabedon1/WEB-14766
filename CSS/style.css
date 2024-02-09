@@ -11,7 +11,6 @@ body{
 h1{
     text-align: center;
     color: rgb(244, 245, 243);
-    background: linear-gradient(to right,#d1d1d1 , #020202);
 }
 
 header{
@@ -142,7 +141,7 @@ header{
 }
 
 
-@media(max-width: 760px){
+@media(max-width: 780px){
     body{
         padding-top: 0px;
     }
@@ -203,7 +202,7 @@ header{
 /* Hasta aqui es los estilos de la cabecera */
 
 /* Aquí empieza los estilos del cuerpo de la página */
-
+/*carrusel*/
 .nuestrosServicios{
     display: flex;
     width: 100%;
@@ -225,20 +224,133 @@ header{
     opacity: 1;
     filter: contrast(120%);
   }
-.infoAdicional{
-  display: flex;
-  background: whitesmoke;
+
+/*hasta aquí carrusel*/
+.options-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las opciones */
+}
+
+.option {
+    margin-right: 20px;
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.options-container button {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options-container button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.personalizar {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+#formulario {
+    margin-top: auto; /* Empuja el formulario hacia abajo */
+    background-color: #f9f9f9; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin-left: auto; /* Centra horizontalmente el formulario */
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#formulario h2 {
+    margin-top: 0; /* Elimina el margen superior del encabezado */
+}
+
+#formulario label {
+    display: block; /* Muestra las etiquetas en una línea separada */
+    margin-bottom: 5px; /* Espacio inferior entre etiquetas */
+}
+
+#formulario input[type="text"],
+#formulario input[type="number"],
+#formulario select,
+#formulario textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior entre campos */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+#formulario button {
+    background-color: #722c30; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+#formulario button:hover {
+    background-color: #bb7b7b; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.personalizar p{
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.personalizar button {
+    background-color: #722c30; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none;
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.personalizar button:hover {
+    background-color: #bb7b7b; /* Cambia el color de fondo al pasar el mouse */
 }
 
 
 
- /* estilos del footer */
+
+.infoAdicional{
+    display: grid;
+    background: rgb(184, 182, 182);
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    object-fit: cover;
+    gap: 20px;
+}
+
+@media(max-width: 1400px){
+    .infoAdicional{
+        grid-template-columns: 1fr;
+        size: 20%;
+    }
+}
+/* estilos del footer */
   
- footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 footer ul {
     list-style-type: none;
@@ -247,80 +359,80 @@ footer ul {
   }
   
   /* Estilo para los elementos de la lista */
-  footer li {
+footer li {
     margin-bottom: 5px; /* Espaciado entre elementos de la lista */
-  }
+}
 
 /* Estilos para los contenedores de información */
 footer .info,
 footer .horarios,
 footer .contacto,
 footer .redes-sociales {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* Estilos para la disposición horizontal */
 footer .info,
 footer .horarios,
 footer .contacto {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: left;
-  position: relative;
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: left;
+    position: relative;
 }
 
 footer .info::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 2px; /* Grosor de la barra vertical */
-  background-color: #b8adad; /* Color de la barra vertical */
-  top: 0;
-  right: 0;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    right: 0;
 }
 
 footer .contacto::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 2px; /* Grosor de la barra vertical */
-  background-color: #b8adad; /* Color de la barra vertical */
-  top: 0;
-  left: -5px;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    left: -5px;
 }
 
 
 
 footer .horarios {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: center;
-  position: relative;
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: center;
+    position: relative;
 }
 
 footer .contacto {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: right;
-  position: relative;
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right;
+    position: relative;
 }
 
 /* Estilos para los iconos de redes sociales */
 footer .redes-sociales {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 footer .iconos-sociales {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 footer .iconos-sociales a {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 /* Ajusta el tamaño de los iconos*/
 footer .iconos-sociales a i {
-  font-size: 24px; 
+    font-size: 24px; 
 }

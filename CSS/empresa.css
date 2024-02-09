@@ -194,77 +194,103 @@ header{
 }
 
  /* estilos para el body */
- .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .imagen-titulo {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Ajusta la altura de la imagen principal */
-    overflow: hidden;
-  }
-  
-  .imagen-titulo img {
-    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho */
-    height: auto;
-    object-fit: cover; /* Escala la imagen para que cubra todo el contenedor */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .imagen-titulo h1 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; /* Puedes ajustar el color del texto según tus necesidades */
-    margin: 0;
-    font-size: 40px;
-  }
-  
-  .imagen-subtitulo {
-    text-align: center;
+ /* Estilos para el body */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos columnas */
+  gap: 20px;
+}
+
+.imagen-titulo {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Ajusta la altura de la imagen principal */
+  overflow: hidden;
+}
+
+.imagen-titulo img {
+  width: 100%; /* Ajusta la imagen para que ocupe todo el ancho */
+  height: auto;
+  object-fit: cover; /* Escala la imagen para que cubra todo el contenedor */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-titulo h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Puedes ajustar el color del texto según tus necesidades */
+  margin: 0;
+  font-size: 40px;
+}
+
+.imagen-subtitulo {
+  text-align: center;
   transition: transform 0.3s ease; /* Transición de movimiento */
   width: 45%; /* Ajuste del ancho para mayor espacio entre las imágenes */
   overflow: hidden; /* Para cortar cualquier exceso de la imagen */
   border: 2px solid #ddd; /* Borde sólido con color gris */
   border-radius: 12px;
   margin-bottom: 20px;
-  
-  }
-  
-  .imagen-subtitulo img {
-    max-width: 30%;
-    height: auto;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
+}
+
+.imagen-subtitulo img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.seccion {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.imagen-subtitulo:hover {
+  transform: translateY(1%); /* Efecto de levantamiento al hacer hover */
+}
+
+.texto {
+  text-align: justify; /* Alineación justificada para el texto */
+  margin: 0 20px; /* Márgenes para separar el texto de los lados */
+}
+
+/* Media Query para 760px */
+@media (max-width: 760px) {
   .seccion {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: center; /* Centra los elementos verticalmente */
   }
 
-  .imagen-subtitulo:hover {
-    transform: translateY(1%); /* Efecto de levantamiento al hacer hover */
+  .imagen-subtitulo {
+    width: 90%; /* Reduce el ancho para que quepan en pantallas más pequeñas */
   }
 
-
-  .texto {
-    text-align: justify; /* Alineación justificada para el texto */
-    margin: 0 20px; /* Márgenes para separar el texto de los lados */
+  .imagen-titulo{
+    height: 500px;
   }
-/* Estilos para el footer */
+}
+
+ 
+/* estilos del footer */
+  
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px;
+  position: relative;
+  z-index: 101;
 }
 footer ul {
     list-style-type: none;
@@ -295,8 +321,7 @@ footer .contacto {
   position: relative;
 }
 
-footer .info::after,
-footer .horarios::after {
+footer .info::after {
   content: '';
   position: absolute;
   height: 100%;
@@ -305,6 +330,18 @@ footer .horarios::after {
   top: 0;
   right: 0;
 }
+
+footer .contacto::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px; /* Grosor de la barra vertical */
+  background-color: #b8adad; /* Color de la barra vertical */
+  top: 0;
+  left: -5px;
+}
+
+
 
 footer .horarios {
   display: inline-block;

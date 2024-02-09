@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Verdana;
   background-color: #fcfcfe;
-  background: linear-gradient(to right,#f8f8f8, #b1abab, #e9e9e9);
+  background: linear-gradient(to right,#f8f8f8, #b1abab, #676565);
     background-size: 400%;
     animation: fondo-anim 5s infinite alternate;
 }
@@ -251,29 +251,32 @@ header{
 }
 
 
-
-
-/* Hasta aqui es los estilos de la cabecera */
-
-/* estilos carrito */
-.header-section{
+.container{
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+ .carrito{
     display: flex;
     justify-content: space-between;
     margin: auto;
     align-items: center;
     position: relative;
-}
-.header-section div{
+    z-index: 9999;
+    
+    
+} 
+.carrito div{
     position: relative;
 }
-.header-section p{
+.carrito p{
     position: absolute;
     top: -24px;
     right: -8px;
     background-color: #fff;
     padding: 1px 6px;
     border-radius: 50%;
-    color: rgb(47, 8, 8);
+    color: red;
     font-weight: 700;
     font-family: system-ui;
     line-height: 18px;
@@ -304,28 +307,14 @@ header{
     margin-bottom: 16px;
     transition-duration: .5s;
 }
+/*end header*/
 
-  /* pagina principal */
-.nav2{
-    display: flex;
-    list-style: none;
-    justify-content: right; 
-    
-}
-
+/* Imagen Principal */
 .imagenPrincipal{
     display: flex;
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-}
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 10px;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
 }
 
 .contenedorImagenPrincipal{
@@ -335,193 +324,220 @@ header{
     position: relative;
 }
 
-.product {
-    margin: 10px;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    grid-column: span 1; /* Ocupa una columna completa */
-    grid-row: span 1; /* Ocupa una fila completa */
-    margin-bottom: 20px; /* Agrega margen entre las tarjetas */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    position: relative;
-    text-align: center;
-    background: rgb(237, 235, 235);
+/* navegador 2 */
+.nav2{
+    display: flex;
+    list-style: none;
+    
     
 }
 
-.product img {
+/* Productos */
+.products{
+    padding-top: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carts{
+    max-width: 250px;
+    box-shadow: 0 3px 10px rgba(213, 24, 24, 0.2);
+    padding-bottom: 34px;
+    margin-bottom: 40px;
+}
+.carts img{
     width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
 }
-
-.overlay {
+.carts p{
+    font-family: system-ui;
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+.carts div p{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    transform: translateY(100%);
+    top: 0;
+    right: 0px;
+    background-color: rgb(0, 235, 129);
+    color: #fff;
+    padding: 2px 7px 4px 21px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.carts div{
+    position: relative;
+}
+.carts a{
+    font-family: system-ui;
+    text-decoration: none;
+    background: red;
+    padding: 9px 23px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.product:hover img {
-    transform: translateY(-20px);
+.carts a:hover{
+    background: #fff;
+    color: red;
+    border: solid 2px red;
+    transition-duration: .3s;
 }
 
-.product h3 {
-    margin-top: 20px; 
-    transition: transform 0.3s ease; 
+/*float cart*/
+.cart-products .item img{
+    width: 115px;
 }
 
-.product:hover {
-    transform: translateY(-10px); 
+.cart-products .item{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px red;
 }
-
-.product:hover h3 {
-    transform: translateY(-10px); 
+.cart-products .item .item-content{
+    margin: 0 19px;
+    width: 201px;
 }
-
-.product:hover .overlay {
-    transform: translateY(0);
+.cart-products .item .item-content h5{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: system-ui;
 }
-
-.overlay button {
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: #3e3331;
-    border: none;
-    color: white;
+.cart-products .item .item-content h6{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.cart-products .item span{
+    background-color: red;
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: system-ui;
     cursor: pointer;
 }
-
-.overlay button:hover {
-    background-color: #8a0f0f;
+.cart-products h3{
+    margin-bottom: 0;
+}
+.cart-products .item .item-content h5.cart-price{
+    font-weight: 700;
 }
 
-.description-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    text-align: center;
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+/*stye to btn close*/
+p.close-btn{
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: #000;
 }
-
-.description-content.active {
-    transform: translateY(0);
+p.author {
+    display: flex;
+    justify-content: center;
+    FONT-VARIANT: JIS04;
+    margin-top: 3%;
+    gap: 7px;
 }
-
-/* Consulta de medios para dispositivos pequeños */
-@media (max-width: 768px) {
-  .container {
-      grid-template-columns: repeat(2, 1fr); 
-  }
-  .contenedorImagenPrincipal{
-    height: 500px;
-  }
-
+p.author a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
 }
 
 /* estilos del footer */
   
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  z-index: 101;
-}
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 101;
+  }
+  footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Estilo para los elementos de la lista */
+    footer li {
+      margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+    }
+  
+  /* Estilos para los contenedores de información */
+  footer .info,
+  footer .horarios,
+  footer .contacto,
+  footer .redes-sociales {
+    margin-bottom: 10px;
   }
   
-  /* Estilo para los elementos de la lista */
-  footer li {
-    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+  /* Estilos para la disposición horizontal */
+  footer .info,
+  footer .horarios,
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: left;
+    position: relative;
   }
-
-/* Estilos para los contenedores de información */
-footer .info,
-footer .horarios,
-footer .contacto,
-footer .redes-sociales {
-  margin-bottom: 10px;
-}
-
-/* Estilos para la disposición horizontal */
-footer .info,
-footer .horarios,
-footer .contacto {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: left;
-  position: relative;
-}
-
-footer .info::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 2px; /* Grosor de la barra vertical */
-  background-color: #b8adad; /* Color de la barra vertical */
-  top: 0;
-  right: 0;
-}
-
-footer .contacto::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 2px; /* Grosor de la barra vertical */
-  background-color: #b8adad; /* Color de la barra vertical */
-  top: 0;
-  left: -5px;
-}
-
-
-
-footer .horarios {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: center;
-  position: relative;
-}
-
-footer .contacto {
-  display: inline-block;
-  width: 30%; /* Ajusta según sea necesario */
-  text-align: right;
-  position: relative;
-}
-
-/* Estilos para los iconos de redes sociales */
-footer .redes-sociales {
-  display: flex;
-  justify-content: center;
-}
-
-footer .iconos-sociales {
-  display: flex;
-  align-items: center;
-}
-
-footer .iconos-sociales a {
-  margin: 0 10px;
-}
-
-/* Ajusta el tamaño de los iconos*/
-footer .iconos-sociales a i {
-  font-size: 24px; 
-}
-
+  
+  footer .info::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    right: 0;
+  }
+  
+  footer .contacto::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Grosor de la barra vertical */
+    background-color: #b8adad; /* Color de la barra vertical */
+    top: 0;
+    left: -5px;
+  }
+  
+  
+  
+  footer .horarios {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: center;
+    position: relative;
+  }
+  
+  footer .contacto {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right;
+    position: relative;
+  }
+  
+  /* Estilos para los iconos de redes sociales */
+  footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .iconos-sociales {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .iconos-sociales a {
+    margin: 0 10px;
+  }
+  
+  /* Ajusta el tamaño de los iconos*/
+  footer .iconos-sociales a i {
+    font-size: 24px; 
+  }
+  

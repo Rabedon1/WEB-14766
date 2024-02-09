@@ -327,6 +327,19 @@ header{
 
 
 
+.whatsapp-bar {
+    background-color: #25d366; /* Color de fondo de la barra */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+}
+
+.whatsapp-link {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    margin-left: 10px; /* Margen izquierdo */
+}
 
 .infoAdicional{
     display: grid;

@@ -6,7 +6,7 @@
 body{
     font-family: Verdana;
     padding: 0px 0px 0px;
-    background: linear-gradient(to right,#ce6f6f , #020202);
+    background: linear-gradient(to right,#dadada , #c6c6c6);
 }
 h1{
     text-align: center;
@@ -182,7 +182,7 @@ header{
     
     .navMenuLink:hover{
         background: none;
-        color:#cfa8a8;
+        color:#dedede;
     }
 
     .toggle{
@@ -245,12 +245,12 @@ header{
 }
 
 .tarjeta .front {
-    background-color: #f4dadf;
+    background-color: #ce6f6f ;
     z-index: 2;
 }
   
 .tarjeta .back {
-    background-color: #baaaaa;
+    background-color: #c1a8a8;
     transform: rotateY(180deg);
     z-index: 1;
 }

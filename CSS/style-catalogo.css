@@ -295,7 +295,7 @@ header{
     position: absolute;
     top: -24px;
     right: -8px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     padding: 1px 6px;
     border-radius: 50%;
     color: red;
@@ -443,14 +443,14 @@ header{
 .overlay button {
     padding: 5px 10px;
     margin: 5px;
-    background-color: #3e3331;
+    background-color: #bb260b;
     border: none;
     color: white;
     cursor: pointer;
 }
 
 .overlay button:hover {
-    background-color: #8a0f0f;
+    background-color: #ba4d4d;
 }
 
 .description-content {

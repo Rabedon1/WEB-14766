@@ -6,7 +6,7 @@
 body{
     font-family: Verdana;
     padding: 0px 0px 0px;
-    background: #8f2c2c;
+    background: #a16060;
 }
 h1{
     text-align: center;
@@ -306,7 +306,7 @@ header{
 }
 
 .personalizar p{
-    color: white;
+    color: black;
     padding: 10px;
     text-align: center;
 }
@@ -328,7 +328,7 @@ header{
 
 
 .whatsapp-bar {
-    background-color: #25d366; /* Color de fondo de la barra */
+    background-color: #54c47f; /* Color de fondo de la barra */
     color: #fff; /* Color del texto */
     padding: 10px; /* Espaciado interno */
     text-align: center; /* Alineación del texto */

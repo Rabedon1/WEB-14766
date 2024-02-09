@@ -216,12 +216,16 @@ header{
     gap: 20px; /* Agrega espacio entre las columnas y las filas */
     text-align: center;
     align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 @media(max-width: 760px){
     .contenedorPreguntas{
         gap: 10px;
         grid-template-columns: 1fr 1fr; /* Reduce el número de columnas en dispositivos pequeños */
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
   
@@ -241,12 +245,12 @@ header{
 }
 
 .tarjeta .front {
-    background-color: #e7e2e2;
+    background-color: #f4dadf;
     z-index: 2;
 }
   
 .tarjeta .back {
-    background-color: #b6b6b6;
+    background-color: #baaaaa;
     transform: rotateY(180deg);
     z-index: 1;
 }

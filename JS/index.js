@@ -129,12 +129,16 @@ function generarFormulario(producto) {
                 <form id="form_rotulos" method="post">
                     <label for="explicacion">Explicación breve de lo que desea personalizar:</label><br>
                     <textarea id="explicacion" name="explicacion" rows="4" cols="50" style="resize: none;" required></textarea><br><br>
+                    <label for="celular">Número de celular:</label><br>
+                    <input type="text" id="celular" name="celular" required><br><br>
+                    <label for="nombre">Nombre y Apellido:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
                     <label for="imagen">Imagen a imprimir:</label><br>
                     <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
                     <label for="alto">Alto:</label><br>
-                    <input type="number" id="alto" name="alto" min=100 max=500 placeholder="Alto en cm" required>
+                    <input type="number" id="alto" name="alto" min="100" max="500" placeholder="Alto en cm" required>
                     <label for="ancho">Ancho:</label><br>
-                    <input type="number" id="ancho" name="ancho" min=100 max=500 placeholder="Ancho en cm" required><br><br>
+                    <input type="number" id="ancho" name="ancho" min="100" max="500" placeholder="Ancho en cm" required><br><br>
                     <button onclick="return validarFormulario();" type="submit">Enviar</button>
                 </form>
             `;
@@ -144,12 +148,16 @@ function generarFormulario(producto) {
                 <form id="form_rotulos" method="post">
                     <label for="explicacion">Explicación breve de lo que desea personalizar:</label><br>
                     <textarea id="explicacion" name="explicacion" rows="4" cols="50" style="resize: none;" required></textarea><br><br>
+                    <label for="celular">Número de celular:</label><br>
+                    <input type="text" id="celular" name="celular" required><br><br>
+                    <label for="nombre">Nombre y Apellido:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
                     <label for="imagen">Imagen a imprimir:</label><br>
                     <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
                     <label for="alto">Alto:</label><br>
-                    <input type="number" id="alto" name="alto" max=500 min=200 placeholder="Alto en cm" required>
+                    <input type="number" id="alto" name="alto" max="500" min="200" placeholder="Alto en cm" required>
                     <label for="ancho">Ancho:</label><br>
-                    <input type="number" id="ancho" name="ancho" max=500 min=200 placeholder="Ancho en cm" required><br><br>
+                    <input type="number" id="ancho" name="ancho" max="500" min="200" placeholder="Ancho en cm" required><br><br>
                     <button onclick="return validarFormulario();" type="submit">Enviar</button>
                 </form>
             `;
@@ -159,6 +167,10 @@ function generarFormulario(producto) {
                 <form id= "form_encuadernado" method="post">
                     <label for="diseno_pasta">Diseño de la pasta (opcional):</label><br>
                     <input type="file" id="diseno_pasta" name="diseno_pasta" accept="image/*" ><br><br>
+                    <label for="celular">Número de celular:</label><br>
+                    <input type="text" id="celular" name="celular" required><br><br>
+                    <label for="nombre">Nombre y Apellido:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
                     <label for="tipo_hoja">Tipo de hoja:</label><br>
                     <select id="tipo_hoja" name="tipo_hoja" required>
                         <option value="cuadros">Cuadros</option>
@@ -166,9 +178,9 @@ function generarFormulario(producto) {
                         <option value="lineas">Líneas</option>
                     </select><br><br>
                     <label for="alto">Alto:</label><br>
-                    <input type="number" id="alto" name="alto" min=14.8 max=27.5 placeholder="Alto en cm" required>
+                    <input type="number" id="alto" name="alto" min="14.8" max="27.5" placeholder="Alto en cm" required>
                     <label for="ancho">Ancho:</label><br>
-                    <input type="number" id="ancho" name="ancho" min=12.5 max=20 placeholder="Ancho en cm" required><br><br>
+                    <input type="number" id="ancho" name="ancho" min="12.5" max="20" placeholder="Ancho en cm" required><br><br>
                     <label for="numero_hojas">Número de hojas:</label><br>
                     <input type="number" id="numero_hojas" name="numero_hojas" min="1" required><br><br>
                     <button type="submit">Enviar</button>
@@ -202,9 +214,6 @@ function validarFormulario() {
         celularInput.focus();
         return false; // Evita que el formulario se envíe
     }
-
-    // Aquí puedes agregar más validaciones según tus requerimientos
-    alert("Formulario enviado")
     
     return true; // Envía el formulario si todas las validaciones son exitosas
 }

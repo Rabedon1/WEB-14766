@@ -43,7 +43,7 @@ function loadEventListeners(){
 function addProduct(e){
     e.preventDefault();
     if (e.target.classList.contains('btn-add-cart')) {
-        const selectProduct = e.target.parentElement.parentElement; // Selecting the parent of parent
+        const selectProduct = e.target.parentElement.parentElement; 
         readTheContent(selectProduct);
     }
 }
@@ -55,9 +55,9 @@ function deleteProduct(e) {
         buyThings.forEach((value, index) => {
             if (value.id == deleteId) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
-                totalCard -= priceReduce; // shorthand for totalCard = totalCard - priceReduce
+                totalCard -= priceReduce; 
                 totalCard = totalCard.toFixed(2);
-                buyThings.splice(index, 1); // Remove the item from the array
+                buyThings.splice(index, 1); 
             }
         });
 

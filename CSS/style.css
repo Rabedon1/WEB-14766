@@ -15,7 +15,7 @@ h1{
 
 header{
     background-color: #5b6074;
-    background: linear-gradient(to right,#CD323A , #020202);
+    background: linear-gradient(to right, #020202,#CD323A );
     height: 80px;
     width: 100%;
     top: 0;
@@ -37,7 +37,7 @@ header{
 
 .imgLogo{
     height: 70px;
-    width: 70px;
+    width: 150px;
     margin-left: 10%;
     margin-top: 5%;
     line-height: 80px;
@@ -152,7 +152,7 @@ header{
     
     .imgLogo{
         height: 50px;
-        width: 50px;
+        width: 100px;
     }
     
     .navMenu{
